@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %} ">
+    <title>Site web | {% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <a href="{% url 'apropos' %}">apropos</a>
+    <a href="{% url 'blog' %}">blog</a>
+    <a href="{% url 'contact' %}">contact</a>
+    <a href="{% url 'maison' %}">maison</a>
+    <a href="{% url 'mariage' %}">mariage</a>
+    <a href="{% url 'nouvelle' %}">nouvelle</a>
+    <br>
+    <br>
+    {% block content %}
+    
+    {% endblock content %}
+</body>
+</html>
